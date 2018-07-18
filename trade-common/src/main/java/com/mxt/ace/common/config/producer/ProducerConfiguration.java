@@ -1,4 +1,4 @@
-package com.mxt.ace.common.config;
+package com.mxt.ace.common.config.producer;
 
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AceMqProducer {
-    private static final Logger logger = LoggerFactory.getLogger(AceMqProducer.class);
+public class ProducerConfiguration {
+    private static final Logger logger = LoggerFactory.getLogger(ProducerConfiguration.class);
     @Value("${rocketmq.producer.group.name}")
     private String groupName;
     @Value("${rocketmq.producer.namesrv.addr}")
